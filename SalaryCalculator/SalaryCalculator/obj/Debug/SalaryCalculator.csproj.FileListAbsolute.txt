@@ -1,0 +1,20 @@
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\bin\Debug\SalaryCalculator.exe.config
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\bin\Debug\SalaryCalculator.exe
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\bin\Debug\SalaryCalculator.pdb
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\obj\Debug\SalaryCalculator.csproj.AssemblyReference.cache
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\obj\Debug\SalaryCalculator.Form1.resources
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\obj\Debug\SalaryCalculator.Properties.Resources.resources
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\obj\Debug\SalaryCalculator.csproj.GenerateResource.cache
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\obj\Debug\SalaryCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\obj\Debug\SalaryCalculator.exe
+C:\Users\Emir Selengil\Desktop\SalaryCalculator\obj\Debug\SalaryCalculator.pdb
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\bin\Debug\SalaryCalculator.exe.config
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\bin\Debug\SalaryCalculator.exe
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\bin\Debug\SalaryCalculator.pdb
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\obj\Debug\SalaryCalculator.csproj.AssemblyReference.cache
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\obj\Debug\SalaryCalculator.Form1.resources
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\obj\Debug\SalaryCalculator.Properties.Resources.resources
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\obj\Debug\SalaryCalculator.csproj.GenerateResource.cache
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\obj\Debug\SalaryCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\obj\Debug\SalaryCalculator.exe
+C:\Users\Emir Selengil\Desktop\School Subjects\OOP 2 Lab Proje\SalaryCalculator\obj\Debug\SalaryCalculator.pdb

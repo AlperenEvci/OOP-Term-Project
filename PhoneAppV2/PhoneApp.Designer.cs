@@ -32,28 +32,8 @@
             this.TabMenu = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.contactPreview = new System.Windows.Forms.ListView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Editscreen = new System.Windows.Forms.TabPage();
             this.contactAdder = new System.Windows.Forms.Button();
-            this.options = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editRecorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backButton = new System.Windows.Forms.Button();
-            this.AddBackButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.AddSaveButton = new System.Windows.Forms.Button();
-            this.NameTxt = new System.Windows.Forms.TextBox();
-            this.SurnameTxt = new System.Windows.Forms.TextBox();
-            this.AddressTxt = new System.Windows.Forms.TextBox();
-            this.DescriptionTxt = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.PhoneNumberTxt = new System.Windows.Forms.MaskedTextBox();
-            this.EmailTxt = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.AddEmail = new System.Windows.Forms.TextBox();
             this.AddPhone = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,6 +46,27 @@
             this.AddAddress = new System.Windows.Forms.TextBox();
             this.AddSurname = new System.Windows.Forms.TextBox();
             this.AddName = new System.Windows.Forms.TextBox();
+            this.AddSaveButton = new System.Windows.Forms.Button();
+            this.AddBackButton = new System.Windows.Forms.Button();
+            this.Editscreen = new System.Windows.Forms.TabPage();
+            this.EmailTxt = new System.Windows.Forms.TextBox();
+            this.PhoneNumberTxt = new System.Windows.Forms.MaskedTextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.DescriptionTxt = new System.Windows.Forms.TextBox();
+            this.AddressTxt = new System.Windows.Forms.TextBox();
+            this.SurnameTxt = new System.Windows.Forms.TextBox();
+            this.NameTxt = new System.Windows.Forms.TextBox();
+            this.backButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.options = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editRecorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.TabMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -108,6 +109,16 @@
             this.contactPreview.UseCompatibleStateImageBehavior = false;
             this.contactPreview.View = System.Windows.Forms.View.List;
             // 
+            // contactAdder
+            // 
+            this.contactAdder.Location = new System.Drawing.Point(3, 408);
+            this.contactAdder.Name = "contactAdder";
+            this.contactAdder.Size = new System.Drawing.Size(265, 52);
+            this.contactAdder.TabIndex = 6;
+            this.contactAdder.Text = "Add Contact";
+            this.contactAdder.UseVisualStyleBackColor = true;
+            this.contactAdder.Click += new System.EventHandler(this.contactAdder_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.AddEmail);
@@ -131,201 +142,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add Contact";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // Editscreen
-            // 
-            this.Editscreen.Controls.Add(this.EmailTxt);
-            this.Editscreen.Controls.Add(this.PhoneNumberTxt);
-            this.Editscreen.Controls.Add(this.lblEmail);
-            this.Editscreen.Controls.Add(this.lblDescription);
-            this.Editscreen.Controls.Add(this.lblAddress);
-            this.Editscreen.Controls.Add(this.lblPhoneNumber);
-            this.Editscreen.Controls.Add(this.lblSurname);
-            this.Editscreen.Controls.Add(this.lblName);
-            this.Editscreen.Controls.Add(this.DescriptionTxt);
-            this.Editscreen.Controls.Add(this.AddressTxt);
-            this.Editscreen.Controls.Add(this.SurnameTxt);
-            this.Editscreen.Controls.Add(this.NameTxt);
-            this.Editscreen.Controls.Add(this.backButton);
-            this.Editscreen.Controls.Add(this.saveButton);
-            this.Editscreen.Location = new System.Drawing.Point(4, 22);
-            this.Editscreen.Name = "Editscreen";
-            this.Editscreen.Padding = new System.Windows.Forms.Padding(3);
-            this.Editscreen.Size = new System.Drawing.Size(268, 463);
-            this.Editscreen.TabIndex = 2;
-            this.Editscreen.Text = "EditScreen";
-            this.Editscreen.UseVisualStyleBackColor = true;
-            // 
-            // contactAdder
-            // 
-            this.contactAdder.Location = new System.Drawing.Point(3, 408);
-            this.contactAdder.Name = "contactAdder";
-            this.contactAdder.Size = new System.Drawing.Size(265, 52);
-            this.contactAdder.TabIndex = 6;
-            this.contactAdder.Text = "Add Contact";
-            this.contactAdder.UseVisualStyleBackColor = true;
-            this.contactAdder.Click += new System.EventHandler(this.contactAdder_Click);
-            // 
-            // options
-            // 
-            this.options.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editRecorToolStripMenuItem,
-            this.deleteRecordToolStripMenuItem});
-            this.options.Name = "options";
-            this.options.Size = new System.Drawing.Size(148, 48);
-            // 
-            // editRecorToolStripMenuItem
-            // 
-            this.editRecorToolStripMenuItem.Name = "editRecorToolStripMenuItem";
-            this.editRecorToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.editRecorToolStripMenuItem.Text = "Edit Record";
-            this.editRecorToolStripMenuItem.Click += new System.EventHandler(this.editRecorToolStripMenuItem_Click);
-            // 
-            // deleteRecordToolStripMenuItem
-            // 
-            this.deleteRecordToolStripMenuItem.Name = "deleteRecordToolStripMenuItem";
-            this.deleteRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.deleteRecordToolStripMenuItem.Text = "Delete Record";
-            this.deleteRecordToolStripMenuItem.Click += new System.EventHandler(this.deleteRecordToolStripMenuItem_Click);
-            // 
-            // backButton
-            // 
-            this.backButton.Location = new System.Drawing.Point(46, 365);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(74, 37);
-            this.backButton.TabIndex = 39;
-            this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // AddBackButton
-            // 
-            this.AddBackButton.Location = new System.Drawing.Point(46, 365);
-            this.AddBackButton.Name = "AddBackButton";
-            this.AddBackButton.Size = new System.Drawing.Size(74, 37);
-            this.AddBackButton.TabIndex = 40;
-            this.AddBackButton.Text = "Back";
-            this.AddBackButton.UseVisualStyleBackColor = true;
-            this.AddBackButton.Click += new System.EventHandler(this.AddBackButton_Click);
-            // 
-            // saveButton
-            // 
-            this.saveButton.Location = new System.Drawing.Point(158, 365);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(74, 37);
-            this.saveButton.TabIndex = 38;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // AddSaveButton
-            // 
-            this.AddSaveButton.Location = new System.Drawing.Point(158, 365);
-            this.AddSaveButton.Name = "AddSaveButton";
-            this.AddSaveButton.Size = new System.Drawing.Size(74, 37);
-            this.AddSaveButton.TabIndex = 41;
-            this.AddSaveButton.Text = "Save";
-            this.AddSaveButton.UseVisualStyleBackColor = true;
-            this.AddSaveButton.Click += new System.EventHandler(this.AddSaveButton_Click);
-            // 
-            // NameTxt
-            // 
-            this.NameTxt.Location = new System.Drawing.Point(98, 34);
-            this.NameTxt.Name = "NameTxt";
-            this.NameTxt.Size = new System.Drawing.Size(134, 20);
-            this.NameTxt.TabIndex = 40;
-            // 
-            // SurnameTxt
-            // 
-            this.SurnameTxt.Location = new System.Drawing.Point(98, 64);
-            this.SurnameTxt.Name = "SurnameTxt";
-            this.SurnameTxt.Size = new System.Drawing.Size(134, 20);
-            this.SurnameTxt.TabIndex = 41;
-            // 
-            // AddressTxt
-            // 
-            this.AddressTxt.Location = new System.Drawing.Point(98, 142);
-            this.AddressTxt.Multiline = true;
-            this.AddressTxt.Name = "AddressTxt";
-            this.AddressTxt.Size = new System.Drawing.Size(134, 71);
-            this.AddressTxt.TabIndex = 42;
-            // 
-            // DescriptionTxt
-            // 
-            this.DescriptionTxt.Location = new System.Drawing.Point(98, 259);
-            this.DescriptionTxt.Multiline = true;
-            this.DescriptionTxt.Name = "DescriptionTxt";
-            this.DescriptionTxt.Size = new System.Drawing.Size(134, 51);
-            this.DescriptionTxt.TabIndex = 43;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(57, 34);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
-            this.lblName.TabIndex = 44;
-            this.lblName.Text = "Name";
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(43, 69);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(49, 13);
-            this.lblSurname.TabIndex = 45;
-            this.lblSurname.Text = "Surname";
-            // 
-            // lblPhoneNumber
-            // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(14, 106);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(78, 13);
-            this.lblPhoneNumber.TabIndex = 46;
-            this.lblPhoneNumber.Text = "Phone Number";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(47, 142);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(45, 13);
-            this.lblAddress.TabIndex = 47;
-            this.lblAddress.Text = "Address";
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(23, 262);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(60, 13);
-            this.lblDescription.TabIndex = 48;
-            this.lblDescription.Text = "Description";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(48, 226);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 49;
-            this.lblEmail.Text = "E-mail";
-            // 
-            // PhoneNumberTxt
-            // 
-            this.PhoneNumberTxt.Location = new System.Drawing.Point(98, 106);
-            this.PhoneNumberTxt.Mask = "(999) 000-0000";
-            this.PhoneNumberTxt.Name = "PhoneNumberTxt";
-            this.PhoneNumberTxt.Size = new System.Drawing.Size(134, 20);
-            this.PhoneNumberTxt.TabIndex = 50;
-            // 
-            // EmailTxt
-            // 
-            this.EmailTxt.Location = new System.Drawing.Point(98, 223);
-            this.EmailTxt.Name = "EmailTxt";
-            this.EmailTxt.Size = new System.Drawing.Size(134, 20);
-            this.EmailTxt.TabIndex = 51;
             // 
             // AddEmail
             // 
@@ -426,13 +242,207 @@
             this.AddName.Size = new System.Drawing.Size(134, 20);
             this.AddName.TabIndex = 52;
             // 
+            // AddSaveButton
+            // 
+            this.AddSaveButton.Location = new System.Drawing.Point(158, 365);
+            this.AddSaveButton.Name = "AddSaveButton";
+            this.AddSaveButton.Size = new System.Drawing.Size(74, 37);
+            this.AddSaveButton.TabIndex = 41;
+            this.AddSaveButton.Text = "Save";
+            this.AddSaveButton.UseVisualStyleBackColor = true;
+            this.AddSaveButton.Click += new System.EventHandler(this.AddSaveButton_Click);
+            // 
+            // AddBackButton
+            // 
+            this.AddBackButton.Location = new System.Drawing.Point(46, 365);
+            this.AddBackButton.Name = "AddBackButton";
+            this.AddBackButton.Size = new System.Drawing.Size(74, 37);
+            this.AddBackButton.TabIndex = 40;
+            this.AddBackButton.Text = "Back";
+            this.AddBackButton.UseVisualStyleBackColor = true;
+            this.AddBackButton.Click += new System.EventHandler(this.AddBackButton_Click);
+            // 
+            // Editscreen
+            // 
+            this.Editscreen.Controls.Add(this.EmailTxt);
+            this.Editscreen.Controls.Add(this.PhoneNumberTxt);
+            this.Editscreen.Controls.Add(this.lblEmail);
+            this.Editscreen.Controls.Add(this.lblDescription);
+            this.Editscreen.Controls.Add(this.lblAddress);
+            this.Editscreen.Controls.Add(this.lblPhoneNumber);
+            this.Editscreen.Controls.Add(this.lblSurname);
+            this.Editscreen.Controls.Add(this.lblName);
+            this.Editscreen.Controls.Add(this.DescriptionTxt);
+            this.Editscreen.Controls.Add(this.AddressTxt);
+            this.Editscreen.Controls.Add(this.SurnameTxt);
+            this.Editscreen.Controls.Add(this.NameTxt);
+            this.Editscreen.Controls.Add(this.backButton);
+            this.Editscreen.Controls.Add(this.saveButton);
+            this.Editscreen.Location = new System.Drawing.Point(4, 22);
+            this.Editscreen.Name = "Editscreen";
+            this.Editscreen.Padding = new System.Windows.Forms.Padding(3);
+            this.Editscreen.Size = new System.Drawing.Size(268, 463);
+            this.Editscreen.TabIndex = 2;
+            this.Editscreen.Text = "EditScreen";
+            this.Editscreen.UseVisualStyleBackColor = true;
+            // 
+            // EmailTxt
+            // 
+            this.EmailTxt.Location = new System.Drawing.Point(98, 223);
+            this.EmailTxt.Name = "EmailTxt";
+            this.EmailTxt.Size = new System.Drawing.Size(134, 20);
+            this.EmailTxt.TabIndex = 51;
+            // 
+            // PhoneNumberTxt
+            // 
+            this.PhoneNumberTxt.Location = new System.Drawing.Point(98, 106);
+            this.PhoneNumberTxt.Mask = "(999) 000-0000";
+            this.PhoneNumberTxt.Name = "PhoneNumberTxt";
+            this.PhoneNumberTxt.Size = new System.Drawing.Size(134, 20);
+            this.PhoneNumberTxt.TabIndex = 50;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(48, 226);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.TabIndex = 49;
+            this.lblEmail.Text = "E-mail";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(23, 262);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(60, 13);
+            this.lblDescription.TabIndex = 48;
+            this.lblDescription.Text = "Description";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(47, 142);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblAddress.TabIndex = 47;
+            this.lblAddress.Text = "Address";
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(14, 106);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(78, 13);
+            this.lblPhoneNumber.TabIndex = 46;
+            this.lblPhoneNumber.Text = "Phone Number";
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Location = new System.Drawing.Point(43, 69);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(49, 13);
+            this.lblSurname.TabIndex = 45;
+            this.lblSurname.Text = "Surname";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(57, 34);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 44;
+            this.lblName.Text = "Name";
+            // 
+            // DescriptionTxt
+            // 
+            this.DescriptionTxt.Location = new System.Drawing.Point(98, 259);
+            this.DescriptionTxt.Multiline = true;
+            this.DescriptionTxt.Name = "DescriptionTxt";
+            this.DescriptionTxt.Size = new System.Drawing.Size(134, 51);
+            this.DescriptionTxt.TabIndex = 43;
+            // 
+            // AddressTxt
+            // 
+            this.AddressTxt.Location = new System.Drawing.Point(98, 142);
+            this.AddressTxt.Multiline = true;
+            this.AddressTxt.Name = "AddressTxt";
+            this.AddressTxt.Size = new System.Drawing.Size(134, 71);
+            this.AddressTxt.TabIndex = 42;
+            // 
+            // SurnameTxt
+            // 
+            this.SurnameTxt.Location = new System.Drawing.Point(98, 64);
+            this.SurnameTxt.Name = "SurnameTxt";
+            this.SurnameTxt.Size = new System.Drawing.Size(134, 20);
+            this.SurnameTxt.TabIndex = 41;
+            // 
+            // NameTxt
+            // 
+            this.NameTxt.Location = new System.Drawing.Point(98, 34);
+            this.NameTxt.Name = "NameTxt";
+            this.NameTxt.Size = new System.Drawing.Size(134, 20);
+            this.NameTxt.TabIndex = 40;
+            // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(46, 365);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(74, 37);
+            this.backButton.TabIndex = 39;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(158, 365);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(74, 37);
+            this.saveButton.TabIndex = 38;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // options
+            // 
+            this.options.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editRecorToolStripMenuItem,
+            this.deleteRecordToolStripMenuItem});
+            this.options.Name = "options";
+            this.options.Size = new System.Drawing.Size(148, 48);
+            // 
+            // editRecorToolStripMenuItem
+            // 
+            this.editRecorToolStripMenuItem.Name = "editRecorToolStripMenuItem";
+            this.editRecorToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.editRecorToolStripMenuItem.Text = "Edit Record";
+            this.editRecorToolStripMenuItem.Click += new System.EventHandler(this.editRecorToolStripMenuItem_Click);
+            // 
+            // deleteRecordToolStripMenuItem
+            // 
+            this.deleteRecordToolStripMenuItem.Name = "deleteRecordToolStripMenuItem";
+            this.deleteRecordToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.deleteRecordToolStripMenuItem.Text = "Delete Record";
+            this.deleteRecordToolStripMenuItem.Click += new System.EventHandler(this.deleteRecordToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(55, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(208, 22);
+            this.panel1.TabIndex = 5;
+            // 
             // PhoneApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 489);
+            this.ClientSize = new System.Drawing.Size(273, 489);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.TabMenu);
             this.Name = "PhoneApp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhoneApp";
             this.Load += new System.EventHandler(this.PhoneApp_Load);
             this.TabMenu.ResumeLayout(false);
@@ -484,6 +494,7 @@
         private System.Windows.Forms.TextBox NameTxt;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

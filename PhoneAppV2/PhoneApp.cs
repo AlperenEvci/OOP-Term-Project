@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using System.Text.RegularExpressions;
+using System.Net.Mail;
 
 namespace PhoneAppV2
 {
@@ -27,8 +29,20 @@ namespace PhoneAppV2
         {
             InitializeComponent();
         }
-        
-        
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                MailAddress mailAddress = new MailAddress(email);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
         private void SaveDataToCsv(string filePath,List<Contacts> list)
         {
             //clearin csv file
@@ -44,7 +58,7 @@ namespace PhoneAppV2
                     using (StreamWriter writer = new StreamWriter(filePath, true))
                     {
                         // Verileri virgülle ayrılmış bir satır olarak dosyaya yaz
-                        writer.WriteLine($"{person.name},{person.surname},{person.description},{person.address},{person.email},{person.description},{person.id}");
+                        writer.WriteLine($"{person.name},{person.surname},{person.phone},{person.address},{person.email},{person.description},{person.id}");
                     }
                 }
                 catch (Exception ex)
@@ -215,28 +229,32 @@ namespace PhoneAppV2
 
         private void AddSaveButton_Click(object sender, EventArgs e)
         {
-            //write the data to the file
-            if (AddName.Text != "" && AddSurname.Text != "" && AddPhone.Text != "" && AddEmail.Text != "" && AddAddress.Text != "" && AddDescription.Text != "")
+            //adding person to list
+            //checking if the email is valid and all of textboxes are filled
+            if (AddName.Text == "" || AddSurname.Text == "" || AddPhone.Text == "" || AddEmail.Text == "" || AddAddress.Text == "" || AddDescription.Text == "")
             {
-                Contacts person = new Contacts
-                {
-                    name = AddName.Text,
-                    surname = AddSurname.Text,
-                    phone = AddPhone.Text,
-                    email = AddEmail.Text,
-                    address = AddAddress.Text,
-                    description = AddDescription.Text,
-                    id = ids
-                };
-                ids++;
-                ContactList.Add(person);
-                SaveDataToCsv("phonebook.csv", ContactList);
-                ContactList.Clear();
+                MessageBox.Show("Please fill all the textboxes");
+                return;
             }
-            else
+            if (!IsValidEmail(AddEmail.Text))
             {
-                MessageBox.Show("Please fill all the fields");
+                MessageBox.Show("Invalid Email");
+                return;
             }
+            Contacts person = new Contacts
+            {
+                name = AddName.Text,
+                surname = AddSurname.Text,
+                phone = AddPhone.Text,
+                email = AddEmail.Text,
+                address = AddAddress.Text,
+                description = AddDescription.Text,
+                id = ids,
+            };
+            ids++;
+            ContactList.Add(person);
+            SaveDataToCsv("phonebook.csv", ContactList);
+            ContactList.Clear();
             contactPreview.Items.Clear();
             PhoneApp_Load(sender, e);
         }
@@ -283,7 +301,15 @@ namespace PhoneAppV2
                     ContactList[i].name = NameTxt.Text;
                     ContactList[i].surname = SurnameTxt.Text;
                     ContactList[i].phone = PhoneNumberTxt.Text;
-                    ContactList[i].email = EmailTxt.Text;
+                    if (!IsValidEmail(EmailTxt.Text))
+                    {
+                        MessageBox.Show("Invalid Email");
+                        return;
+                    }
+                    else
+                    {
+                        ContactList[i].email = EmailTxt.Text;
+                    }
                     ContactList[i].address = AddressTxt.Text;
                     ContactList[i].description = DescriptionTxt.Text;
                     break;
@@ -296,5 +322,6 @@ namespace PhoneAppV2
 
 
         }
+        
     }
 }

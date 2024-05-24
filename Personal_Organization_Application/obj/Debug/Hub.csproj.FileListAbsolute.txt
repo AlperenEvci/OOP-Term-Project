@@ -122,6 +122,7 @@ C:\Users\alper\Desktop\My_Application (1)\My_Application\Hub - Kopya (2)\obj\Deb
 C:\Users\alper\Desktop\My_Application (1)\My_Application\Hub - Kopya (2)\obj\Debug\Hub.csproj.CoreCompileInputs.cache
 C:\Users\alper\Desktop\My_Application (1)\My_Application\Hub - Kopya (2)\obj\Debug\Hub.exe
 C:\Users\alper\Desktop\My_Application (1)\My_Application\Hub - Kopya (2)\obj\Debug\Hub.pdb
+<<<<<<< HEAD
 C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\bin\Debug\Hub.exe.config
 C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\bin\Debug\Hub.exe
 C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\bin\Debug\Hub.pdb
@@ -141,3 +142,5 @@ C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klas
 C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.csproj.CoreCompileInputs.cache
 C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.exe
 C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.pdb
+=======
+>>>>>>> 9cedcad08a3514ae12272f8bf16baf0856ab604d

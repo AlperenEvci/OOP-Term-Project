@@ -1,49 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\",
+  "WorkspaceRootPath": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|c:\\users\\alper\\desktop\\my_application (1)\\my_application\\hub - kopya (2)\\viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|c:\\users\\alper\\desktop\\dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-fall\\proje denemeler\\yeni klas\u00F6r\\oop-term-project\\personal_organization_application\\viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\phoneapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\phoneapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:phoneapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|c:\\users\\alper\\desktop\\my_application (1)\\my_application\\hub - kopya (2)\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\hub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\hub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:hub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\personalinformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\personalinformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:personalinformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -54,28 +54,31 @@
       "DocumentGroups": [
         {
           "DockedHeight": 254,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Login.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Login.cs [Design]",
-              "RelativeToolTip": "Login.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-23T19:11:32.491Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ViewNotesForm.cs",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\ViewNotesForm.cs",
               "RelativeDocumentMoniker": "ViewNotesForm.cs",
-              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\ViewNotesForm.cs",
               "RelativeToolTip": "ViewNotesForm.cs",
               "ViewState": "AQIAAHUAAAAAAAAAAAAAAGYAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -86,110 +89,101 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "password.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\password.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\password.cs",
               "RelativeDocumentMoniker": "password.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\password.cs [Design]",
-              "RelativeToolTip": "password.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\password.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:30:55.544Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-24T09:30:55.544Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Notes.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Notes.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\Notes.cs",
               "RelativeDocumentMoniker": "Notes.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Notes.cs [Design]",
-              "RelativeToolTip": "Notes.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Notes.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:30:54.966Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-24T09:30:54.966Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "PhoneApp.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PhoneApp.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\PhoneApp.cs",
               "RelativeDocumentMoniker": "PhoneApp.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PhoneApp.cs [Design]",
-              "RelativeToolTip": "PhoneApp.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PhoneApp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:25:16.887Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-23T19:25:16.887Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Register.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Register.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\Register.cs",
               "RelativeDocumentMoniker": "Register.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Register.cs [Design]",
-              "RelativeToolTip": "Register.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Register.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:33:24.206Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-23T19:33:24.206Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ViewNotesForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\ViewNotesForm.cs",
               "RelativeDocumentMoniker": "ViewNotesForm.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs [Design]",
-              "RelativeToolTip": "ViewNotesForm.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T15:20:31.917Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-23T15:20:31.917Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Hub.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Hub.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\Hub.cs",
               "RelativeDocumentMoniker": "Hub.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Hub.cs [Design]",
-              "RelativeToolTip": "Hub.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Hub.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T20:12:13.867Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-20T20:12:13.867Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "PersonalInformations.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PersonalInformations.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\PersonalInformations.cs",
               "RelativeDocumentMoniker": "PersonalInformations.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PersonalInformations.cs [Design]",
-              "RelativeToolTip": "PersonalInformations.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PersonalInformations.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:13:56.992Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-23T19:13:56.992Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "management.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\management.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\management.cs",
               "RelativeDocumentMoniker": "management.cs",
               "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\management.cs [Design]",
-              "RelativeToolTip": "management.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\management.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:30:54.379Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-24T09:30:54.379Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Functions.cs",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Functions.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\Functions.cs",
               "RelativeDocumentMoniker": "Functions.cs",
-              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Functions.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\Functions.cs",
               "RelativeToolTip": "Functions.cs",
               "ViewState": "AQIAAK4AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:31:35.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T09:31:35.13Z"
             }
           ]
         }

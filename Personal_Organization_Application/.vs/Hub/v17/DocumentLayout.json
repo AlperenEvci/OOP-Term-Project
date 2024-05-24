@@ -1,0 +1,199 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|c:\\users\\alper\\desktop\\my_application (1)\\my_application\\hub - kopya (2)\\viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:viewnotesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\phoneapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:phoneapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|c:\\users\\alper\\desktop\\my_application (1)\\my_application\\hub - kopya (2)\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\hub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:hub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\personalinformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:personalinformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 254,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Login.cs [Design]",
+              "RelativeToolTip": "Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T19:11:32.491Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ViewNotesForm.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs",
+              "RelativeDocumentMoniker": "ViewNotesForm.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs",
+              "RelativeToolTip": "ViewNotesForm.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAAGYAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T13:24:58.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "password.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\password.cs",
+              "RelativeDocumentMoniker": "password.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\password.cs [Design]",
+              "RelativeToolTip": "password.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T09:30:55.544Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Notes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Notes.cs",
+              "RelativeDocumentMoniker": "Notes.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Notes.cs [Design]",
+              "RelativeToolTip": "Notes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T09:30:54.966Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PhoneApp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PhoneApp.cs",
+              "RelativeDocumentMoniker": "PhoneApp.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PhoneApp.cs [Design]",
+              "RelativeToolTip": "PhoneApp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T19:25:16.887Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Register.cs",
+              "RelativeDocumentMoniker": "Register.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Register.cs [Design]",
+              "RelativeToolTip": "Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T19:33:24.206Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewNotesForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs",
+              "RelativeDocumentMoniker": "ViewNotesForm.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\ViewNotesForm.cs [Design]",
+              "RelativeToolTip": "ViewNotesForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T15:20:31.917Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Hub.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Hub.cs",
+              "RelativeDocumentMoniker": "Hub.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Hub.cs [Design]",
+              "RelativeToolTip": "Hub.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T20:12:13.867Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PersonalInformations.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PersonalInformations.cs",
+              "RelativeDocumentMoniker": "PersonalInformations.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\PersonalInformations.cs [Design]",
+              "RelativeToolTip": "PersonalInformations.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T19:13:56.992Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "management.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\management.cs",
+              "RelativeDocumentMoniker": "management.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\management.cs [Design]",
+              "RelativeToolTip": "management.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T09:30:54.379Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Functions.cs",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Functions.cs",
+              "RelativeDocumentMoniker": "Functions.cs",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\My_Application (1)\\My_Application\\Hub - Kopya (2)\\Functions.cs",
+              "RelativeToolTip": "Functions.cs",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T09:31:35.13Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

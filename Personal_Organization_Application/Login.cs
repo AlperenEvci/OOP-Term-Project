@@ -65,6 +65,15 @@ namespace Hub
 
         private void buttonGiriş_Click(object sender, EventArgs e)
         {
+            if (chckRemember.Checked)
+            {
+                string textToWrite = textBoxMail.Text + "\n" + textBoxŞifre.Text;
+                File.WriteAllText("remember.txt", textToWrite);
+            }
+            else
+            {
+                File.WriteAllText("remember.txt", string.Empty);
+            }
             string filePath = "userProfiles.csv";
             string newPassword = string.Empty;
             bool passwordChanged = false;
@@ -206,7 +215,16 @@ namespace Hub
 
         private void Login_Load(object sender, EventArgs e)
         {
+            if (File.Exists("remember.txt"))
+            {
+                string[] lines = File.ReadAllLines("remember.txt");
 
+                if (lines.Length > 0)
+                {
+                    textBoxMail.Text = lines.Length > 0 ? lines[0] : string.Empty;
+                    textBoxŞifre.Text = lines.Length > 1 ? lines[1] : string.Empty;
+                }
+            }
         }
 
         bool ismoved = false;

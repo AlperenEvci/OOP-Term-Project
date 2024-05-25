@@ -33,8 +33,11 @@
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.textBoxContent = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.buttonSaveNote = new System.Windows.Forms.Button();
-            this.HubButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonSaveNote = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSaveNote)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -71,33 +74,50 @@
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Text = "Title";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(88, 263);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 18);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Save Note";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Hub.Properties.Resources.back_button;
+            this.pictureBox1.Location = new System.Drawing.Point(458, 252);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.HubButton_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            // 
             // buttonSaveNote
             // 
-            this.buttonSaveNote.Location = new System.Drawing.Point(35, 259);
-            this.buttonSaveNote.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSaveNote.Image = global::Hub.Properties.Resources.floppy_disk;
+            this.buttonSaveNote.Location = new System.Drawing.Point(35, 252);
             this.buttonSaveNote.Name = "buttonSaveNote";
-            this.buttonSaveNote.Size = new System.Drawing.Size(107, 31);
-            this.buttonSaveNote.TabIndex = 5;
-            this.buttonSaveNote.Text = "Save Note";
-            this.buttonSaveNote.UseVisualStyleBackColor = true;
+            this.buttonSaveNote.Size = new System.Drawing.Size(47, 41);
+            this.buttonSaveNote.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonSaveNote.TabIndex = 11;
+            this.buttonSaveNote.TabStop = false;
             this.buttonSaveNote.Click += new System.EventHandler(this.buttonSaveNote_Click);
-            // 
-            // HubButton
-            // 
-            this.HubButton.Location = new System.Drawing.Point(366, 255);
-            this.HubButton.Name = "HubButton";
-            this.HubButton.Size = new System.Drawing.Size(109, 38);
-            this.HubButton.TabIndex = 9;
-            this.HubButton.Text = "Back";
-            this.HubButton.UseVisualStyleBackColor = true;
-            this.HubButton.Click += new System.EventHandler(this.HubButton_Click);
+            this.buttonSaveNote.MouseEnter += new System.EventHandler(this.buttonSaveNote_MouseEnter);
+            this.buttonSaveNote.MouseLeave += new System.EventHandler(this.buttonSaveNote_MouseLeave);
             // 
             // CreateNoteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 312);
-            this.Controls.Add(this.HubButton);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSaveNote);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.textBoxContent);
@@ -107,6 +127,8 @@
             this.Name = "CreateNoteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateNoteForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSaveNote)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,7 +140,8 @@
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.TextBox textBoxContent;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Button buttonSaveNote;
-        private System.Windows.Forms.Button HubButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox buttonSaveNote;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

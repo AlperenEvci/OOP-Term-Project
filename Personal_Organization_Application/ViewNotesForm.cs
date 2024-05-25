@@ -243,5 +243,39 @@ namespace Hub
         {
             this.Close();
         }
+
+        private void buttonSaveChanges_MouseEnter(object sender, EventArgs e)
+        {
+            buttonSaveChanges.Location = new Point(buttonSaveChanges.Location.X + 2, buttonSaveChanges.Location.Y - 2);
+        }
+
+        private void buttonSaveChanges_MouseLeave(object sender, EventArgs e)
+        {
+            buttonSaveChanges.Location = new Point(buttonSaveChanges.Location.X - 2, buttonSaveChanges.Location.Y + 2);
+        }
+
+        private void buttonDelete_MouseEnter(object sender, EventArgs e)
+        {
+            buttonDelete.Location = new Point(buttonDelete.Location.X + 2, buttonDelete.Location.Y - 2);
+        }
+
+        private void buttonDelete_MouseLeave(object sender, EventArgs e)
+        {
+            buttonDelete.Location = new Point(buttonDelete.Location.X - 2, buttonDelete.Location.Y + 2);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X + 2, pictureBox1.Location.Y - 2);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y + 2);
+        }
     }
 }

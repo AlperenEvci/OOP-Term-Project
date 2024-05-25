@@ -32,7 +32,6 @@
             this.buttonKayıt = new System.Windows.Forms.Button();
             this.textBoxMail = new System.Windows.Forms.TextBox();
             this.textBoxŞifre = new System.Windows.Forms.TextBox();
-            this.labelUnuttum = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.passwordHide = new System.Windows.Forms.CheckBox();
@@ -45,6 +44,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.PictureBox();
+            this.chckRemember = new System.Windows.Forms.CheckBox();
+            this.labelUnuttum = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,7 +59,7 @@
             this.buttonGiriş.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGiriş.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonGiriş.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonGiriş.Location = new System.Drawing.Point(23, 131);
+            this.buttonGiriş.Location = new System.Drawing.Point(24, 158);
             this.buttonGiriş.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGiriş.Name = "buttonGiriş";
             this.buttonGiriş.Size = new System.Drawing.Size(161, 40);
@@ -73,7 +74,7 @@
             this.buttonKayıt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKayıt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonKayıt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonKayıt.Location = new System.Drawing.Point(52, 198);
+            this.buttonKayıt.Location = new System.Drawing.Point(53, 225);
             this.buttonKayıt.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKayıt.Name = "buttonKayıt";
             this.buttonKayıt.Size = new System.Drawing.Size(102, 32);
@@ -99,18 +100,6 @@
             this.textBoxŞifre.Size = new System.Drawing.Size(125, 20);
             this.textBoxŞifre.TabIndex = 3;
             this.textBoxŞifre.UseSystemPasswordChar = true;
-            // 
-            // labelUnuttum
-            // 
-            this.labelUnuttum.AutoSize = true;
-            this.labelUnuttum.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.labelUnuttum.Location = new System.Drawing.Point(58, 173);
-            this.labelUnuttum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelUnuttum.Name = "labelUnuttum";
-            this.labelUnuttum.Size = new System.Drawing.Size(96, 13);
-            this.labelUnuttum.TabIndex = 4;
-            this.labelUnuttum.Text = "Şifreni mi Unuttun?";
-            this.labelUnuttum.Click += new System.EventHandler(this.labelUnuttum_Click);
             // 
             // label1
             // 
@@ -250,7 +239,7 @@
             this.exit.BackColor = System.Drawing.Color.Transparent;
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Image = global::Hub.Properties.Resources.power;
-            this.exit.Location = new System.Drawing.Point(265, 199);
+            this.exit.Location = new System.Drawing.Point(265, 231);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(29, 31);
             this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -260,11 +249,37 @@
             this.exit.MouseEnter += new System.EventHandler(this.exit_MouseEnter);
             this.exit.MouseLeave += new System.EventHandler(this.exit_MouseLeave);
             // 
+            // chckRemember
+            // 
+            this.chckRemember.AutoSize = true;
+            this.chckRemember.Location = new System.Drawing.Point(39, 128);
+            this.chckRemember.Name = "chckRemember";
+            this.chckRemember.Size = new System.Drawing.Size(95, 17);
+            this.chckRemember.TabIndex = 19;
+            this.chckRemember.Text = "Remember Me";
+            this.chckRemember.UseVisualStyleBackColor = true;
+            // 
+            // labelUnuttum
+            // 
+            this.labelUnuttum.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.labelUnuttum.AutoSize = true;
+            this.labelUnuttum.LinkColor = System.Drawing.Color.DarkTurquoise;
+            this.labelUnuttum.Location = new System.Drawing.Point(59, 200);
+            this.labelUnuttum.Name = "labelUnuttum";
+            this.labelUnuttum.Size = new System.Drawing.Size(96, 13);
+            this.labelUnuttum.TabIndex = 20;
+            this.labelUnuttum.TabStop = true;
+            this.labelUnuttum.Text = "Şifreni mi Unuttun?";
+            this.labelUnuttum.VisitedLinkColor = System.Drawing.Color.DarkTurquoise;
+            this.labelUnuttum.Click += new System.EventHandler(this.labelUnuttum_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 249);
+            this.ClientSize = new System.Drawing.Size(320, 274);
+            this.Controls.Add(this.labelUnuttum);
+            this.Controls.Add(this.chckRemember);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -277,7 +292,6 @@
             this.Controls.Add(this.passwordHide);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelUnuttum);
             this.Controls.Add(this.textBoxŞifre);
             this.Controls.Add(this.textBoxMail);
             this.Controls.Add(this.buttonKayıt);
@@ -304,7 +318,6 @@
         private System.Windows.Forms.Button buttonKayıt;
         private System.Windows.Forms.TextBox textBoxMail;
         private System.Windows.Forms.TextBox textBoxŞifre;
-        private System.Windows.Forms.Label labelUnuttum;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox passwordHide;
@@ -317,6 +330,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox exit;
+        private System.Windows.Forms.CheckBox chckRemember;
+        private System.Windows.Forms.LinkLabel labelUnuttum;
     }
 }
 

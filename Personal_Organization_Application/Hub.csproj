@@ -156,6 +156,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SalaryCalculator.resx">
+      <DependentUpon>SalaryCalculator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewNotesForm.resx">
       <DependentUpon>ViewNotesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +235,12 @@
     <Content Include="bin\Debug\Hub.exe" />
     <Content Include="bin\Debug\Hub.pdb" />
     <Content Include="Hub.sln" />
+    <None Include="Resources\back-button.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\floppy-disk.png" />
+    <None Include="Resources\create1.png" />
+    <None Include="Resources\create.png" />
+    <None Include="Resources\search.png" />
     <None Include="Resources\linkedin.png" />
     <None Include="Resources\setting.png" />
     <None Include="Resources\d9e85afc3a241817106815e2ed6025661.jpg" />

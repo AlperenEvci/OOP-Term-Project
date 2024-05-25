@@ -122,3 +122,61 @@ C:\Users\alper\Desktop\My_Application (1)\My_Application\Hub - Kopya (2)\obj\Deb
 C:\Users\alper\Desktop\My_Application (1)\My_Application\Hub - Kopya (2)\obj\Debug\Hub.csproj.CoreCompileInputs.cache
 C:\Users\alper\Desktop\My_Application (1)\My_Application\Hub - Kopya (2)\obj\Debug\Hub.exe
 C:\Users\alper\Desktop\My_Application (1)\My_Application\Hub - Kopya (2)\obj\Debug\Hub.pdb
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\bin\Debug\Hub.exe.config
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\bin\Debug\Hub.exe
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\bin\Debug\Hub.pdb
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.csproj.AssemblyReference.cache
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.CreateNoteForm.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.Hub.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.Login.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.management.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.password.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.Register.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.Notes.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.PersonalInformations.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.PhoneApp.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.Properties.Resources.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.ViewNotesForm.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.csproj.GenerateResource.cache
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.csproj.CoreCompileInputs.cache
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.exe
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application\obj\Debug\Hub.pdb
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\bin\Debug\Hub.exe.config
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\bin\Debug\Hub.exe
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\bin\Debug\Hub.pdb
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.csproj.AssemblyReference.cache
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.CreateNoteForm.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.Hub.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.Login.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.management.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.password.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.Register.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.Notes.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.PersonalInformations.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.PhoneApp.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.Properties.Resources.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.ViewNotesForm.resources
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.csproj.GenerateResource.cache
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.csproj.CoreCompileInputs.cache
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.exe
+C:\Users\Emir Selengil\Desktop\Personal_Organization_Application - Kopya\obj\Debug\Hub.pdb
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\bin\Debug\Hub.exe.config
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\bin\Debug\Hub.exe
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\bin\Debug\Hub.pdb
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.csproj.AssemblyReference.cache
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.CreateNoteForm.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.Hub.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.Login.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.management.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.password.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.Register.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.Notes.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.PersonalInformations.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.PhoneApp.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.Properties.Resources.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.ViewNotesForm.resources
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.csproj.GenerateResource.cache
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.csproj.CoreCompileInputs.cache
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.exe
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.pdb
+C:\Users\alper\Desktop\Dosyalarım\2.sınıf\2023-Fall\Proje Denemeler\Yeni klasör\OOP-Term-Project\Personal_Organization_Application\obj\Debug\Hub.SalaryCalculator.resources

@@ -32,7 +32,8 @@
             this.textBoxMail = new System.Windows.Forms.TextBox();
             this.buttonGiriş = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.HubButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,23 +76,24 @@
             this.progressBar1.Size = new System.Drawing.Size(166, 23);
             this.progressBar1.TabIndex = 11;
             // 
-            // HubButton
+            // pictureBox1
             // 
-            this.HubButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.HubButton.Location = new System.Drawing.Point(215, 117);
-            this.HubButton.Name = "HubButton";
-            this.HubButton.Size = new System.Drawing.Size(104, 40);
-            this.HubButton.TabIndex = 26;
-            this.HubButton.Text = "Back Login";
-            this.HubButton.UseVisualStyleBackColor = true;
-            this.HubButton.Click += new System.EventHandler(this.HubButton_Click);
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Hub.Properties.Resources.back_button;
+            this.pictureBox1.Location = new System.Drawing.Point(266, 113);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.HubButton_Click);
             // 
             // password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 173);
-            this.Controls.Add(this.HubButton);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxMail);
@@ -101,6 +103,9 @@
             this.Name = "password";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "password";
+            this.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,6 +116,6 @@
         private System.Windows.Forms.TextBox textBoxMail;
         private System.Windows.Forms.Button buttonGiriş;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button HubButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

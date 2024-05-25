@@ -105,5 +105,25 @@ namespace Hub
         {
             this.Close();   
         }
+
+        private void buttonSaveNote_MouseEnter(object sender, EventArgs e)
+        {
+            buttonSaveNote.Location = new Point(buttonSaveNote.Location.X + 2, buttonSaveNote.Location.Y - 2);
+        }
+
+        private void buttonSaveNote_MouseLeave(object sender, EventArgs e)
+        {
+            buttonSaveNote.Location = new Point(buttonSaveNote.Location.X - 2, buttonSaveNote.Location.Y + 2);
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X + 2, pictureBox1.Location.Y - 2);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y + 2);
+        }
     }
 }

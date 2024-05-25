@@ -12,6 +12,9 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net.Mail;
 using System.Net;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
+using System.Xml.Linq;
 
 namespace Hub
 {
@@ -20,6 +23,7 @@ namespace Hub
         public Register()
         {
             InitializeComponent();
+            label2.BackColor = Color.Transparent;
         }
 
         private bool controlEmail()
@@ -67,33 +71,6 @@ namespace Hub
                         string phoneNo = infos[2];
 
                         if (phoneNo == txtPhoneNo.Text)
-                        {
-                            return true;
-                            break;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-        private bool controlPassword()
-        {
-            string filePath = "userProfiles.csv";
-
-            if (File.Exists(filePath))
-            {
-                List<string> lines = File.ReadAllLines(filePath).ToList();
-
-                if (lines.Count != 0)
-                {
-                    for (int i = 0; i < lines.Count; i++)
-                    {
-                        string satir = lines[i];
-                        string[] infos = satir.Split(',');
-
-                        string password = infos[5];
-
-                        if (password == txtPassword.Text)
                         {
                             return true;
                             break;
@@ -172,13 +149,28 @@ namespace Hub
             }
             
         }
+        private const string ValidChars = "1234567890";
 
+        private static readonly Random random = new Random();
+        public static string GenerateVerificationCode(int length)
+        {
+            char[] password = new char[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                password[i] = ValidChars[random.Next(ValidChars.Length)];
+            }
+
+            return new string(password);
+        }
+        bool ismoved = true;
+        string VerificationCode = GenerateVerificationCode(6);
         private async void buttonKayıt_Click(object sender, EventArgs e)
         {
             string usermail = txtEmail.Text;
             string base64String = string.Empty;
 
-            if (controlEmail() || controlPhone() || controlPassword())
+            if (controlEmail() || controlPhone())
             {
                 if (controlEmail())
                 {
@@ -189,11 +181,6 @@ namespace Hub
                 {
                     MessageBox.Show("Bu telefon numarası daha önce girilmiştir", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPhoneNo.Clear();
-                }
-                if (controlPassword())
-                {
-                    MessageBox.Show("Bu şifre daha önce girilmiştir", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtPassword.Clear();
                 }                
             }
             else
@@ -213,42 +200,37 @@ namespace Hub
                     {
                         try
                         {
-                            if (pictureBox1.Image != null)
-                            {
-                                base64String = Functions.ImageToBase64(pictureBox1.Image);
-
-                                using (StreamWriter sw = new StreamWriter("images.csv", true))
-                                {
-                                    sw.WriteLine(base64String);
-                                }
-                            }
-
-                            string to = txtEmail.Text;
-                            string subject = "Hoşgeldiniz!";
-                            string body = "Bu mail kayıdınızın başarılı bir şekilde tamamlandığını belirtmektedir!";
-
+                            string to = txtEmail.Text;                            
+                            string subject2 = "Your Verify Code!";  
+                            string body2 = "Verify Code: " + VerificationCode;
                             string Email = "AkarE1521@outlook.com";
                             string Password = "AkarE2021";
                             string Host = "smtp.office365.com";
                             int Port = 587;
 
-                            using (MailMessage mail = new MailMessage(Email, to, subject, body))
+
+                            using (MailMessage mail = new MailMessage(Email, to, subject2, body2))
                             {
                                 using (SmtpClient smtp = new SmtpClient(Host, Port))
                                 {
                                     smtp.UseDefaultCredentials = false;
                                     smtp.EnableSsl = true;
                                     smtp.Credentials = new NetworkCredential(Email, Password);
-
-                                    //await smtp.SendMailAsync(mail);
-
-                                    record(txtName.Text, txtSurname.Text, txtPhoneNo.Text, txtAddress.Text, txtEmail.Text, txtPassword.Text, base64String, "userProfiles.csv");
-                                    txtName.Clear();
-                                    txtSurname.Clear();
-                                    txtPhoneNo.Clear();
-                                    txtAddress.Clear();
-                                    txtEmail.Clear();
-                                    txtPassword.Clear();
+                                    await smtp.SendMailAsync(mail);
+                                    if (ismoved)
+                                    {
+                                        ismoved = false;
+                                        this.Size = new Size(this.Size.Width, this.Size.Height + 90);
+                                        panel1.Size = new Size(panel1.Size.Width, panel1.Size.Height + 90);
+                                        txtVerify.Visible = true;
+                                        label2.Visible = true;
+                                        button1.Visible = true;
+                                        label2.Location = new Point(label2.Location.X, label2.Location.Y + 315);
+                                        txtVerify.Location = new Point(txtVerify.Location.X, txtVerify.Location.Y + 360);
+                                        button1.Location = new Point(19, 370);
+                                        pictureBox2.Location = new Point(pictureBox2.Location.X, button1.Location.Y - 10);
+                                    }
+                                    
                                 }
                             }
                         }
@@ -256,9 +238,7 @@ namespace Hub
                         {
                             MessageBox.Show("Hata: " + ex.Message, "Hata");
                         }
-                        Login form = new Login();
-                        form.Show();
-                        this.Close();
+                        
                     }
                 }   
             }            
@@ -306,6 +286,57 @@ namespace Hub
             this.Close();
             Login login = new Login();
             login.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string usermail = txtEmail.Text;
+            string base64String = string.Empty;
+            base64String = Functions.ImageToBase64(pictureBox1.Image);
+            string to = txtEmail.Text;
+            string subject = "Hoşgeldiniz!";
+            string body = "Bu mail kayıdınızın başarılı bir şekilde tamamlandığını belirtmektedir!";
+            string Email = "AkarE1521@outlook.com";
+            string Password = "AkarE2021";
+            string Host = "smtp.office365.com";
+            int Port = 587;
+            if (txtVerify.Text == VerificationCode)
+            {
+                using (MailMessage mail = new MailMessage(Email, to, subject, body))
+                {
+                    using (SmtpClient smtp = new SmtpClient(Host, Port))
+                    {
+                        smtp.UseDefaultCredentials = false;
+                        smtp.EnableSsl = true;
+                        smtp.Credentials = new NetworkCredential(Email, Password);
+                        smtp.SendMailAsync(mail);
+
+                        record(txtName.Text, txtSurname.Text, txtPhoneNo.Text, txtAddress.Text, txtEmail.Text, txtPassword.Text, base64String, "userProfiles.csv");
+                        txtName.Clear();
+                        txtSurname.Clear();
+                        txtPhoneNo.Clear();
+                        txtAddress.Clear();
+                        txtEmail.Clear();
+                        txtPassword.Clear();
+                    }
+                }
+                Login form = new Login();
+                form.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Verify Code is not true!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox2.Location = new Point(pictureBox2.Location.X + 2, pictureBox2.Location.Y - 2);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Location = new Point(pictureBox2.Location.X - 2, pictureBox2.Location.Y + 2);
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Hub.Managers;
+using Hub.Observers;
+using Hub;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,42 +10,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Hub.phonebook_form;
 
 namespace Hub
 {
     public partial class Hub : Form
     {
+        static ReminderManager reminderManager = new ReminderManager();
+        ReminderNotification reminderNotification = new ReminderNotification(reminderManager);
+
+        public static bool isOpen = false;
+
+        ReminderMain reminderMain;
         public Hub()
         {
-            InitializeComponent();            
-            this.FormClosing += MainForm_FormClosing;
-
+            InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(Hub_KeyDown);
+            reminderManager.AddObserver(reminderNotification);
+            TimerNearestReminder = new Timer();
+            TimerNearestReminder.Interval = 1000; 
+            TimerNearestReminder.Tick += new EventHandler(TimerNearestReminder_Tick);
+            TimerNearestReminder.Start();
         }
-
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
-
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-
-                DialogResult result = MessageBox.Show("Do you want to close?", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                
-                if (result == DialogResult.Yes)
-                {
-                    Application.Exit();
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
+           
             timerDateTime.Start();
-            hh.Text ="Hello, "+ UserProfile.name;
+            hh.Text ="Hello, "+ UserProfile.name.ToUpper();
+
             if(UserProfile.statue == "admin")
             {
                 management.Visible = true;
@@ -50,9 +46,32 @@ namespace Hub
 
             Image image = Functions.Base64ToImage(UserProfile.picture);
             Profile.Image = image;
+            UpdateNearestReminderLabel();
+        }
+        
+        public void UpdateNearestReminderLabel()
+        {
+            var nearestReminder = GetNearestActiveReminder();
+            if (!string.IsNullOrEmpty(nearestReminder))
+            {
+                lblReminder.Text = $"Nearest reminder: {nearestReminder}";
+            }
+            else
+            {
+                lblReminder.Text = "";
+            }
         }
 
-        
+        private string GetNearestActiveReminder()
+        {
+            var reminders = reminderManager.GetReminders();
+            var activeReminders = reminders
+                .Where(r => r.Date.Add(r.Time) > DateTime.Now)
+                .OrderBy(r => r.Date.Add(r.Time))
+                .FirstOrDefault();
+            
+            return activeReminders?.Summary;
+        }
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
@@ -61,18 +80,37 @@ namespace Hub
 
         private void PhoneApp_Click(object sender, EventArgs e)
         {
-            PhoneApp phoneApp = new PhoneApp();
-            phoneApp.Show();
-            this.Hide();
+            
+            salarycalculaterform1.Visible = false;
+            managementForm.Visible = false;
+            notesForm1.Visible = false;
+            pı1.Visible = false;
+
+            phonebook_form phoneForm = phonebook_form1 as phonebook_form;
+            if (phoneForm == null)
+            {
+                phoneForm = new phonebook_form();
+                phonebook_form1 = phoneForm;
+                phonebook_form1.PhoneApp_Load();
+            }
+            
+            phonebook_form1.Visible = true;
+
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to close?", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            DialogResult result = MessageBox.Show("Do you want to Logout?", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(isOpen)
             {
-                Application.Exit();
+                MessageBox.Show("You have to close Reminder App befores Logout", "ERROR!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            if (result == DialogResult.Yes)
+            {                
+                Login login = new Login();
+                login.Show();
+                this.Close();
             }
         }
 
@@ -128,36 +166,56 @@ namespace Hub
 
         private void Profile_Click(object sender, EventArgs e)
         {
-            PersonalInformations personalInformation = new PersonalInformations();
-            personalInformation.Show();
-            this.Hide();
+           
+            salarycalculaterform1.Visible = false;
+            managementForm.Visible = false;
+            notesForm1.Visible = false;
+            phonebook_form1.Visible = false;
+            pı1.Visible = true;
         }
 
         private void SalaryApp_Click(object sender, EventArgs e)
         {
-            SalaryCalculator salaryCalculator = new SalaryCalculator();
-            salaryCalculator.Show();
-            this.Hide();
+            
+            salarycalculaterform1.Visible = true;
+            managementForm.Visible = false;
+            notesForm1.Visible = false;
+            phonebook_form1.Visible = false;
+            pı1.Visible = false;
         }
 
         private void Notes_Click(object sender, EventArgs e)
         {
-            Notes noteBook = new Notes();
-            noteBook.Show();
-            this.Hide();
-
-        }
-
-        private void time_Click(object sender, EventArgs e)
-        {
+           
+            salarycalculaterform1.Visible = false;
+            managementForm.Visible = false;
+            phonebook_form1.Visible = false;
+            pı1.Visible = false;
+            notesForm notesForm = notesForm1 as notesForm;
+            if (notesForm == null)
+            {
+                notesForm = new notesForm();
+                notesForm1 = notesForm;
+            }
+            notesForm1.Visible = true;
 
         }
 
         private void management_Click(object sender, EventArgs e)
         {
-            management management = new management();
-            management.Show();
-            this.Hide();
+            
+            salarycalculaterform1.Visible = false;
+            notesForm1.Visible = false;
+            phonebook_form1.Visible = false;
+            pı1.Visible = false;
+            managementcontrolform manageform = managementForm as managementcontrolform;
+            if (manageform == null)
+            {
+                manageform = new managementcontrolform();
+                managementcontrolform1 = manageform;
+            }
+            managementForm.Visible = true;
+            managementForm.management_Load();
         }
 
         private void management_MouseEnter(object sender, EventArgs e)
@@ -169,10 +227,54 @@ namespace Hub
         {
             management.Location = new Point(management.Location.X - 2, management.Location.Y + 2);
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void ReminderApp_Click(object sender, EventArgs e)
         {
+           
+            salarycalculaterform1.Visible = false;
+            managementForm.Visible = false;
+            notesForm1.Visible = false;
+            phonebook_form1.Visible = false;
+            pı1.Visible = false;
 
+            if (!isOpen)
+            {
+                reminderMain = new ReminderMain(reminderManager);
+                reminderMain.Show();
+                isOpen = true;
+            }
+            else
+            {
+                if (Application.OpenForms["ReminderMain"] != null)
+                {
+                    Application.OpenForms["ReminderMain"].Focus();
+                }
+
+                if (Application.OpenForms["ViewRemindersForm"] != null)
+                {
+                    Application.OpenForms["ViewRemindersForm"].Focus();
+                }
+
+                if (Application.OpenForms["AddReminderForm"] != null)
+                {
+                    Application.OpenForms["AddReminderForm"].Focus();
+                }
+            }
+        }
+        private void Hub_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.Z)
+            {
+                pı1.Undo();
+            }
+            else if (e.Control && e.KeyCode == Keys.Y)
+            {
+                pı1.Redo();
+            }
+        }
+
+        private void TimerNearestReminder_Tick(object sender, EventArgs e)
+        {
+            UpdateNearestReminderLabel();
         }
     }
 }

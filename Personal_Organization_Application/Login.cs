@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -19,13 +20,11 @@ namespace Hub
     public partial class Login : Form
     {
 
-        string filePath = "userProfiles.csv";
         List<cloneUser> cloneUsers = new List<cloneUser>();
 
         public Login()
         {
             InitializeComponent();
-            
         }
         private const string ValidChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890$&*_+-=<>?";
 
@@ -46,7 +45,6 @@ namespace Hub
         {
             password pass = new password();
             pass.Show();
-
             this.Hide();
         }
 
@@ -54,26 +52,11 @@ namespace Hub
         {
             Register kayıt = new Register();
             kayıt.Show();
-
             this.Hide();
         }
 
-        private void textBoxMail_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buttonGiriş_Click(object sender, EventArgs e)
-        {
-            if (chckRemember.Checked)
-            {
-                string textToWrite = textBoxMail.Text + "\n" + textBoxŞifre.Text;
-                File.WriteAllText("remember.txt", textToWrite);
-            }
-            else
-            {
-                File.WriteAllText("remember.txt", string.Empty);
-            }
+        {            
             string filePath = "userProfiles.csv";
             string newPassword = string.Empty;
             bool passwordChanged = false;
@@ -84,63 +67,64 @@ namespace Hub
             {
                 MessageBox.Show("There is currently no user account.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxMail.Text = string.Empty;
-                textBoxŞifre.Text = string.Empty;
+                textBoxPassword.Text = string.Empty;
                 return;
             }
 
-                Functions.getData(filePath, cloneUsers);
+            Functions.getData(filePath, cloneUsers);
 
-                foreach (cloneUser user in cloneUsers)
-                {
-                    if (user.Email == textBoxMail.Text)
-                    {
-                        
-                        UserProfile.name = user.Name;
-                        UserProfile.surname = user.Surname;
-                        UserProfile.phone = user.PhoneNumber;
-                        UserProfile.address = user.Address;
-                        UserProfile.email = user.Email;
-                        UserProfile.password = user.Password;
-                        UserProfile.picture = user.Picture;
-                        UserProfile.ID = user.ID;
-                        break;
-                    }
-                }
-                
-                if (UserProfile.name.StartsWith("*"))
-                {
-                    UserProfile.statue = "admin";
-
-                    UserProfile.name = UserProfile.name.Replace("*", "");
-                    
-                }
-                else
-                {
-                    UserProfile.statue = "user";
-                }
-
-                if (UserProfile.email == textBoxMail.Text && UserProfile.password == textBoxŞifre.Text)
-                {
-                    userFound = true;
-                }
-
-            if (UserProfile.email == textBoxMail.Text && UserProfile.password != textBoxŞifre.Text)
+            foreach (cloneUser user in cloneUsers)
             {
-                string usermail = textBoxMail.Text;
-                passwordChanged = true;
+                if (user.Email == textBoxMail.Text)
+                {
 
-                newPassword = GeneratePassword(6);
+                    UserProfile.name = user.Name;
+                    UserProfile.surname = user.Surname;
+                    UserProfile.phone = user.PhoneNumber;
+                    UserProfile.address = user.Address;
+                    UserProfile.email = user.Email;
+                    UserProfile.password = user.Password;
+                    UserProfile.picture = user.Picture;
+                    UserProfile.ID = user.ID;
 
+                    if (UserProfile.name.StartsWith("*"))
+                    {
+                        UserProfile.statue = "admin";
+
+                        UserProfile.name = UserProfile.name.Replace("*", "");
+
+                    }
+                    else if (UserProfile.name.StartsWith("!"))
+                    {
+                        UserProfile.statue = "part-time user";
+
+                        UserProfile.name = UserProfile.name.Replace("!", "");
+                    }
+                    else
+                    {
+                        UserProfile.statue = "user";
+                    }
+
+                    break;
+                }
+            }
+
+            
+
+            if (UserProfile.email == textBoxMail.Text && UserProfile.password == textBoxPassword.Text)
+            {
+                userFound = true;
+            }
+
+            if (UserProfile.email == textBoxMail.Text && UserProfile.password != textBoxPassword.Text)
+            {                
                 string to = textBoxMail.Text;
-                string subject = "İzinsiz Giriş!";
+                string subject = "Unauthorized Entry!";
                 DateTime now = DateTime.Now;
 
-                string body = "Hesabınıza " + now + " tarihinde izinsiz giriş denemesi yapılmıştır!" + Environment.NewLine + "Güvenlik sebebiyle şifreniz değiştirilmiştir. Yeni şifreniz: " + newPassword;
-
-                UserProfile.password = newPassword;
-
-                string Email = "AkarE1521@outlook.com";
-                string Password = "AkarE2021";
+                string body = "There was an unauthorized login attempt to your account on " + now + " !";
+                string Email = "mailAdresiniz";
+                string Password = "şifreniz";
                 string Host = "smtp.office365.com";
                 int Port = 587;
 
@@ -151,70 +135,40 @@ namespace Hub
                         smtp.UseDefaultCredentials = false;
                         smtp.EnableSsl = true;
                         smtp.Credentials = new NetworkCredential(Email, Password);
-                        //smtp.Send(mail);
+                        smtp.Send(mail);
                     }
                 }
             }
+
             if (!userFound)
             {
                 MessageBox.Show("Invalid email or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxMail.Clear();
-                textBoxŞifre.Clear();
-            }
-            if (passwordChanged)
-            {
-                List<cloneUser> usersClone = new List<cloneUser>();                
-                Functions.edit(usersClone, UserProfile.name, UserProfile.surname, UserProfile.phone, UserProfile.address, UserProfile.email, UserProfile.password, UserProfile.picture, UserProfile.statue,UserProfile.salary);
-
+                textBoxPassword.Clear();
+                File.WriteAllText("remember.txt", string.Empty);
             }
             else
             {
+                if (chckRemember.Checked)
+                {
+                    string textToWrite = textBoxMail.Text + "\n" + textBoxPassword.Text;
+                    File.WriteAllText("remember.txt", textToWrite);
+                }
+                else
+                {
+                    File.WriteAllText("remember.txt", string.Empty);
+                }
                 Hub hub = new Hub();
-                this.Hide();
                 hub.Show();
+                this.Hide();
             }
+
             
-        }                                                       
-         
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (passwordHide.CheckState == CheckState.Checked)
-            {
-                textBoxŞifre.UseSystemPasswordChar = false;
-
-            }
-            else
-            {
-                textBoxŞifre.UseSystemPasswordChar = true;
-
-            }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-                System.Diagnostics.Process.Start("https://www.linkedin.com/in/emir-selengil/");
-        }
-
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.linkedin.com/in/alperen-evci/"); 
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.linkedin.com/in/akin-bektas/");
-        }
-
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.linkedin.com/in/onur-dalgic/");
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+
             if (File.Exists("remember.txt"))
             {
                 string[] lines = File.ReadAllLines("remember.txt");
@@ -222,97 +176,10 @@ namespace Hub
                 if (lines.Length > 0)
                 {
                     textBoxMail.Text = lines.Length > 0 ? lines[0] : string.Empty;
-                    textBoxŞifre.Text = lines.Length > 1 ? lines[1] : string.Empty;
+                    textBoxPassword.Text = lines.Length > 1 ? lines[1] : string.Empty;
                 }
             }
         }
-
-        bool ismoved = false;
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-
-            if (!ismoved) 
-            { 
-                this.Size = new Size(this.Size.Width + 75, this.Size.Height);
-                pictureBox1.Location = new Point(pictureBox1.Location.X + 75, pictureBox1.Location.Y); 
-                exit.Location = new Point(exit.Location.X+75, exit.Location.Y);
-                ismoved = true; 
-                label3.Visible = true;
-
-            }
-        }
-        bool ismoved1 = false;
-        private void pictureBox2_MouseHover(object sender, EventArgs e)
-        {
-            if (!ismoved1)
-            {
-                pictureBox2.Location = new Point(pictureBox2.Location.X + 75, pictureBox2.Location.Y);
-                ismoved1 = true;
-                label4.Visible = true;
-
-            }
-        }
-        bool ismoved2 = false;
-        private void pictureBox3_MouseHover(object sender, EventArgs e)
-        {
-            if (!ismoved2)
-            {
-                pictureBox3.Location = new Point(pictureBox3.Location.X + 75, pictureBox3.Location.Y);
-                ismoved2 = true;
-                label5.Visible = true;
-
-            }
-        }
-
-        bool ismoved3 = false;
-        private void pictureBox4_MouseHover(object sender, EventArgs e)
-        {
-            if (!ismoved3)
-            {
-                pictureBox4.Location = new Point(pictureBox4.Location.X + 75, pictureBox4.Location.Y);
-                ismoved3 = true;
-                label6.Visible = true;
-
-            }
-        }
-
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
-        {
-            if (ismoved) pictureBox1.Location = new Point(pictureBox1.Location.X + 2, pictureBox1.Location.Y - 2);
-
-        }
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
-        {
-            if (ismoved) pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y + 2);
-        }
-        private void pictureBox2_MouseEnter(object sender, EventArgs e)
-        {
-            if (ismoved1) pictureBox2.Location = new Point(pictureBox2.Location.X + 2, pictureBox2.Location.Y - 2);
-        }
-
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-            if (ismoved1) pictureBox2.Location = new Point(pictureBox2.Location.X - 2, pictureBox2.Location.Y + 2);
-        }
-        private void pictureBox3_MouseEnter(object sender, EventArgs e)
-        {
-            if (ismoved2) pictureBox3.Location = new Point(pictureBox3.Location.X + 2, pictureBox3.Location.Y - 2);
-        }
-
-        private void pictureBox3_MouseLeave(object sender, EventArgs e)
-        {
-            if (ismoved2) pictureBox3.Location = new Point(pictureBox3.Location.X - 2, pictureBox3.Location.Y + 2);
-        }
-        private void pictureBox4_MouseEnter(object sender, EventArgs e)
-        {
-            if (ismoved3) pictureBox4.Location = new Point(pictureBox4.Location.X + 2, pictureBox4.Location.Y - 2);
-        }
-
-        private void pictureBox4_MouseLeave(object sender, EventArgs e)
-        {
-            if (ismoved3) pictureBox4.Location = new Point(pictureBox4.Location.X - 2, pictureBox4.Location.Y + 2);
-        }
-
         private void exit_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want to close?", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -332,5 +199,63 @@ namespace Hub
         {
             exit.Location = new Point(exit.Location.X - 2, exit.Location.Y + 2);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        bool passwordVisible = false;
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            //changing image of picturebox
+            if (passwordVisible)
+            {
+                passwordVisible = false;
+                textBoxPassword.UseSystemPasswordChar = false;
+                pictureBox4.Image = Properties.Resources.view;
+            }
+            else
+            {
+                passwordVisible = true;
+                textBoxPassword.UseSystemPasswordChar = true;
+                pictureBox4.Image = Properties.Resources.eye;
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://linktr.ee/akare21?utm_source=linktree_profile_share&ltsid=792c0307-8897-40ec-b992-26b0267e005c");
+        }
+
+        private void pictureBox6_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox6.Location = new Point(pictureBox6.Location.X + 2, pictureBox6.Location.Y - 2);
+        }
+
+        private void pictureBox6_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox6.Location = new Point(pictureBox6.Location.X - 2, pictureBox6.Location.Y + 2);
+        }
+
+        private void buttonLogin_MouseEnter(object sender, EventArgs e)
+        {
+            buttonLogin.Location = new Point(buttonLogin.Location.X + 2, buttonLogin.Location.Y - 2);
+        }
+
+        private void buttonLogin_MouseLeave(object sender, EventArgs e)
+        {
+            buttonLogin.Location = new Point(buttonLogin.Location.X - 2, buttonLogin.Location.Y + 2);
+        }
+
+        private void buttonRegister_MouseEnter(object sender, EventArgs e)
+        {
+            buttonRegister.Location = new Point(buttonRegister.Location.X + 2, buttonRegister.Location.Y - 2);
+        }
+
+        private void buttonRegister_MouseLeave(object sender, EventArgs e)
+        {
+            buttonRegister.Location = new Point(buttonRegister.Location.X - 2, buttonRegister.Location.Y + 2);
+        }
+
     }
 }

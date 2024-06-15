@@ -1,58 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|c:\\users\\alper\\desktop\\dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-fall\\proje denemeler\\yeni klas\u00F6r\\oop-term-project\\personal_organization_application\\bin\\debug\\userprofiles.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0B799A9A-B600-49FA-87A6-7CE72FC074B4}|Hub.csproj|solutionrelative:bin\\debug\\userprofiles.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Emir Selengil\\Desktop\\OOP_Lab_Projects\\Term_Project\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedHeight": 254,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "userProfiles.csv",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\bin\\Debug\\userProfiles.csv",
-              "RelativeDocumentMoniker": "bin\\Debug\\userProfiles.csv",
-              "ToolTip": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\bin\\Debug\\userProfiles.csv",
-              "RelativeToolTip": "bin\\Debug\\userProfiles.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-25T10:22:46.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Register.cs",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\Register.cs",
-              "RelativeDocumentMoniker": "Register.cs",
-              "ToolTip": "C:\\Users\\alper\\Desktop\\Dosyalar\u0131m\\2.s\u0131n\u0131f\\2023-Fall\\Proje Denemeler\\Yeni klas\u00F6r\\OOP-Term-Project\\Personal_Organization_Application\\Register.cs",
-              "RelativeToolTip": "Register.cs",
-              "ViewState": "AQIAAJkAAAAAAAAAAAAMwKwAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T19:11:41.571Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

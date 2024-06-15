@@ -40,7 +40,7 @@ namespace Hub
 
         private void buttonGiriş_Click(object sender, EventArgs e)
         {
-            buttonGiriş.Enabled = false;
+            
             string filePath = "userProfiles.csv";
             string newPassword = string.Empty;
             bool passwordChanged = false;
@@ -54,8 +54,6 @@ namespace Hub
                 return;
             }
 
-
-
             Functions.getData(filePath, cloneUsers);
 
             foreach (cloneUser user in cloneUsers)
@@ -68,42 +66,47 @@ namespace Hub
                     UserProfile.address = user.Address;
                     UserProfile.email = user.Email;
                     UserProfile.password = user.Password;
+                    UserProfile.ID = user.ID;
                     UserProfile.picture = user.Picture;
+
+                    if (UserProfile.name.StartsWith("*"))
+                    {
+                        UserProfile.statue = "admin";
+
+                        UserProfile.name = UserProfile.name.Replace("*", "");
+                        
+                    }
+                    else if (UserProfile.name.StartsWith("!"))
+                    {
+                        UserProfile.statue = "part-time user";
+
+                        UserProfile.name = UserProfile.name.Replace("!", "");
+                    }
+                    else
+                    {
+                        UserProfile.statue = "user";
+                    }
                     break;
                 }
             }
 
-
-
             if (UserProfile.email == textBoxMail.Text) userFound = true;
-            
-
-            if (UserProfile.name.StartsWith("*"))
-            {
-                UserProfile.statue = "admin";
-
-                UserProfile.name = UserProfile.name.Replace("*", "");
-            }
-            else
-            {
-                UserProfile.statue = "user";
-            }
-
 
             if (userFound)
             {
+                buttonForgot.Enabled = false;
                 string usermail = textBoxMail.Text;
                 passwordChanged = true;
                 newPassword = GeneratePassword(6);
 
                 string to = textBoxMail.Text;
-                string subject = "Yeni Şifre";
-                string body = "Yeni Şifreniz: " + newPassword;
+                string subject = "New Password";
+                string body = "New Password: " + newPassword;
 
                 UserProfile.password = newPassword;
 
-                string Email = "AkarE1521@outlook.com";
-                string Password = "AkarE2021";
+                string Email = "mailAdresiniz";
+                string Password = "şifreniz";
                 string Host = "smtp.office365.com";
                 int Port = 587;
 
@@ -119,12 +122,12 @@ namespace Hub
                             progressBar1.Value = i;
                             Thread.Sleep(50);
                         }
-                        //smtp.Send(mail);
-                        MessageBox.Show("Yeni şifreniz Email adresinize gönderildi!", "Success");
+                        smtp.Send(mail);
+                        MessageBox.Show("Your new password has been sent to your email address!", "Success");
                     }
                 }
             }
-            if (!userFound)
+            else
             {
                 MessageBox.Show("Invalid email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxMail.Clear();
@@ -133,7 +136,7 @@ namespace Hub
             if (passwordChanged)
             {
                 List<cloneUser> usersClone = new List<cloneUser>();
-                Functions.edit(usersClone, UserProfile.name, UserProfile.surname, UserProfile.phone, UserProfile.address, UserProfile.email, UserProfile.password, UserProfile.picture, UserProfile.statue,UserProfile.salary);
+                Functions.edit(usersClone, UserProfile.name, UserProfile.surname, UserProfile.phone, UserProfile.address, UserProfile.email, newPassword, UserProfile.picture, UserProfile.statue,UserProfile.salary);
                 Login form = new Login();
                 form.Show();
                 this.Close();

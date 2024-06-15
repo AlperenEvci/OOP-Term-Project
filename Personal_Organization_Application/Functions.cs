@@ -14,11 +14,13 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net.Mail;
+using System.Runtime.Remoting.Contexts;
 
 namespace Hub
 {
     internal class Functions
     {
+        public static int idR = 1;
         public static void getData(string filePath, List<cloneUser> list)
         {
 
@@ -63,6 +65,7 @@ namespace Hub
                         ID = Convert.ToInt32(row["ID"]),
                         Picture = row["Picture"].ToString(),
                     };
+                    idR = user.ID + 1;
                     list.Add(user);
                 }
             }
@@ -72,7 +75,7 @@ namespace Hub
             Functions.getData("userProfiles.csv", list);
             foreach (cloneUser user in list)
             {
-                if (user.Email == UserProfile.email)
+                if (user.ID == UserProfile.ID)
                 {
                     user.Name = Name;
                     user.Surname = Surname;
@@ -92,7 +95,6 @@ namespace Hub
 
             SaveDataToCsv("userProfiles.csv", list);
             list.Clear();
-
         }
         public static void SaveDataToCsv(string filePath, List<cloneUser> list)
         {
@@ -101,12 +103,10 @@ namespace Hub
             //writing the headers
             string headers = "Name,Surname,PhoneNumber,Address,Email,Password,Salary,ID,Picture\n";
             File.WriteAllText(filePath, headers);
-            int id = 1;
+            
             for (int i = 0; i < list.Count; i++)
             {
                 cloneUser person = list[i];
-                person.ID = id;
-                id++;
                 try
                 {
                     using (StreamWriter writer = new StreamWriter(filePath, true))
@@ -124,6 +124,18 @@ namespace Hub
                             }
                             
                         }
+                        else if(person.Statue == "part-time user")
+                        {
+                            if (person.Salary != null)
+                            {
+                                // Verileri virgülle ayrılmış bir satır olarak dosyaya yaz
+                                writer.WriteLine($"{"!" + person.Name},{person.Surname},{person.PhoneNumber},{person.Address},{person.Email},{person.Password},{person.Salary},{person.ID},{person.Picture}");
+                            }
+                            else
+                            {
+                                writer.WriteLine($"{"!" + person.Name},{person.Surname},{person.PhoneNumber},{person.Address},{person.Email},{person.Password},0,{person.ID},{person.Picture}");
+                            }
+                        }
                         else
                         {
                             if (person.Salary != null)
@@ -136,13 +148,12 @@ namespace Hub
                                 writer.WriteLine($"{person.Name},{person.Surname},{person.PhoneNumber},{person.Address},{person.Email},{person.Password},0,{person.ID},{person.Picture}");
                             }
                         }
-                        
                     }
                 }
                 catch (Exception ex)
                 {
                     // Hata yönetimi burada yapılabilir
-                    MessageBox.Show($"Hata: {ex.Message}");
+                    MessageBox.Show($"Error: {ex.Message}");
                 }
             }
         }
@@ -159,13 +170,22 @@ namespace Hub
         }
         public static Image Base64ToImage(string base64String)
         {
-            byte[] imageBytes = Convert.FromBase64String(base64String);
-            using (MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length))
+            Image image;
+
+            if (string.IsNullOrEmpty(base64String))
             {
-                ms.Write(imageBytes, 0, imageBytes.Length);
-                Image image = Image.FromStream(ms, true);
-                return image;
+                return Properties.Resources.view;
             }
+            else
+            {
+                byte[] imageBytes = Convert.FromBase64String(base64String);
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    image = Image.FromStream(ms, true);
+                }
+            }
+
+            return image;
         }
         public static bool IsValidEmail(string email)
         {
@@ -203,5 +223,60 @@ namespace Hub
             }
             return true;
         }
+
+        public static void deleteUser(List<cloneUser> list, int ID)
+        {
+            deleteNote(ID);
+            deletePhoneBook(ID);
+            Functions.getData("userProfiles.csv", list);
+            foreach (cloneUser user in list)
+            {
+                if (user.ID == ID)
+                {
+                    list.Remove(user);
+                    break;
+                }
+            }
+            SaveDataToCsv("userProfiles.csv", list);
+            list.Clear();
+        }
+
+        public static void deleteNote(int ID)
+        {
+
+            string[] notes = File.ReadAllLines("notes.csv");
+            List<string> updatedNotes = new List<string>();
+
+            foreach (var note in notes)
+            {
+                var noteParts = note.Trim('"').Split(new[] { "\",\"" }, 3, StringSplitOptions.None);
+
+                if (noteParts.Length > 1 && noteParts[0] != ID.ToString())
+                {
+                    updatedNotes.Add(note);
+                }
+            }
+
+            // Write the updated notes to the file
+            File.WriteAllLines("notes.csv", updatedNotes);
+
+        }
+        public static void deletePhoneBook(int ID)
+        {
+            string[] lines = File.ReadAllLines("phoneBook.csv");
+            List<string> updatedPhoneBook = new List<string>();
+
+            foreach (var item in lines)
+            {
+                string[] items = item.Split(',');
+                if (items[7]!= ID.ToString())
+                {
+                    updatedPhoneBook.Add(item);
+                }
+            }
+            File.WriteAllLines("phoneBook.csv", updatedPhoneBook);
+        }
+        
+
     }
 }

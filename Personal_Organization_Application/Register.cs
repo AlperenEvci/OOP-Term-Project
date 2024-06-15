@@ -23,9 +23,8 @@ namespace Hub
         public Register()
         {
             InitializeComponent();
-            label2.BackColor = Color.Transparent;
         }
-
+        
         private bool controlEmail()
         {
             string filePath = "userProfiles.csv";
@@ -34,53 +33,56 @@ namespace Hub
             {
                 List<string> lines = File.ReadAllLines(filePath).ToList();
 
-                if (lines.Count != 0)
+                if (lines.Count > 1)
                 {
                     for (int i = 0; i < lines.Count; i++)
                     {
-                        string satir = lines[i];
-                        string[] infos = satir.Split(',');
+                        string line = lines[i]; 
+                        string[] infos = line.Split(',');
 
                         string email = infos[4];
 
                         if (email == txtEmail.Text)
                         {
                             return true;
-                            break;
                         }
                     }
                 }
             }
             return false;
         }
-        private bool controlPhone()
+        private bool ControlEmptyCell()
         {
-            string filePath = "userProfiles.csv";
-
-            if (File.Exists(filePath))
+            if (txtName.Text.Trim() == "" || txtName.Text.Trim() == "Name")
             {
-                List<string> lines = File.ReadAllLines(filePath).ToList();
-
-                if (lines.Count != 0)
-                {
-                    for (int i = 0; i < lines.Count; i++)
-                    {
-                        string satir = lines[i];
-                        string[] infos = satir.Split(',');
-
-                        string phoneNo = infos[2];
-
-                        if (phoneNo == txtPhoneNo.Text)
-                        {
-                            return true;
-                            break;
-                        }
-                    }
-                }
+                return true;
+            }
+            if (txtSurname.Text.Trim() == "" || txtSurname.Text.Trim() == "Surname")
+            {
+                return true;
+            }
+            if (txtAddress.Text.Trim() == "" || txtAddress.Text.Trim() == "Address")
+            {
+                return true;
+            }
+            if (txtPassword.Text.Trim() == "" || txtPassword.Text.Trim() == "Password")
+            {
+                return true;
             }
             return false;
         }
+        private bool controlPhoto()
+        {
+            string photo = string.Empty;
+            photo = Functions.ImageToBase64(pictureBox1.Image);
 
+            if(photo.Length < 30000)
+            {
+                return true;
+            }
+
+            return false;
+        }
         private bool IsLet(string input)
         {
             for (int i = 0; i < input.Length; i++)
@@ -92,6 +94,33 @@ namespace Hub
                 }
             }
             return true;
+        }
+        private bool controlPhone()
+        {
+            string filePath = "userProfiles.csv";
+
+            if (File.Exists(filePath))
+            {
+                List<string> lines = File.ReadAllLines(filePath).ToList();
+
+                if (lines.Count > 1)
+                {
+                    for (int i = 0; i < lines.Count; i++)
+                    {
+                        string satir = lines[i];
+                        string[] infos = satir.Split(',');
+
+                        string phoneNo = infos[2];
+
+                        if (phoneNo == txtPhoneNo.Text)
+                        {
+                            return true;
+                            
+                        }
+                    }
+                }
+            }
+            return false;
         }
 
 
@@ -107,45 +136,35 @@ namespace Hub
             user.Picture = photo;
             
             string userData = string.Empty;
-            int satirSayisi = 0;
-
             
-
             try
             {
                 FileStream fileStream = File.Open("userProfiles.csv", FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fileStream.Close();
-                long fileSize = new FileInfo(filepath).Length;
+                List<cloneUser> lines = new List<cloneUser>();
+                Functions.getData("userProfiles.csv", lines);
 
-                using (StreamReader sr = new StreamReader("userProfiles.csv"))
-                {
-                    while (sr.ReadLine() != null)
-                    {
-                        satirSayisi++;
-                    }
-                }
-
-                if (fileSize == 0)
+                if (lines.Count == 0)
                   {
                       user.Name = "*" + name;
                       string headers = "Name,Surname,PhoneNumber,Address,Email,Password,Salary,ID,Picture\n";
                       File.WriteAllText(filepath, headers); // Write headers to the file
 
-                      userData = $"{user.Name},{user.Surname},{user.PhoneNumber},{user.Address},{user.Email},{user.Password},0,1,{user.Picture}\n"; // Create user data string
+                      userData = $"{user.Name},{user.Surname},{user.PhoneNumber},{user.Address},{user.Email},{user.Password},0,{Functions.idR},{user.Picture}\n"; // Create user data string
                       
-                  }
-                  else
-                  {
-                      userData = $"{user.Name},{user.Surname},{user.PhoneNumber},{user.Address},{user.Email},{user.Password},0,{satirSayisi},{user.Picture}\n"; // Create user data string
-                      
-                  }
-                  File.AppendAllText(filepath, userData);
-                  MessageBox.Show("Bilgileriniz kayıt edildi!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    userData = $"{user.Name},{user.Surname},{user.PhoneNumber},{user.Address},{user.Email},{user.Password},0,{Functions.idR},{user.Picture}\n"; // Create user data string
+                    
+                }
+                File.AppendAllText(filepath, userData);
+                MessageBox.Show("Your informations have been recorded!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                   
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Bir hata oluştu", ex);
+                throw new ApplicationException("An error occurred", ex);
             }
             
         }
@@ -164,36 +183,48 @@ namespace Hub
             return new string(password);
         }
         bool ismoved = true;
-        string VerificationCode = GenerateVerificationCode(6);
-        private async void buttonKayıt_Click(object sender, EventArgs e)
+        string VerificationCode = string.Empty; 
+        private async void buttonRegister_Click(object sender, EventArgs e)
         {
             string usermail = txtEmail.Text;
             string base64String = string.Empty;
+            txtVerify.Text = "Verify Code";
+            VerificationCode = GenerateVerificationCode(6);
 
+            if (ControlEmptyCell())
+            {
+                MessageBox.Show("Empty cell.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!controlPhoto())
+            {
+                MessageBox.Show("The size of the photo is larger than the allowed value.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (controlEmail() || controlPhone())
             {
                 if (controlEmail())
                 {
-                    MessageBox.Show("Bu mail adresi daha önce girilmiştir", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This email address has been used before.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtEmail.Clear();
                 }
                 if (controlPhone())
                 {
-                    MessageBox.Show("Bu telefon numarası daha önce girilmiştir", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This phone number has been used before.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPhoneNo.Clear();
                 }                
             }
             else
             {
-                if(txtName.Text.Trim() == "" || txtSurname.Text.Trim() == "" || txtPhoneNo.Text.Trim() == "" || txtAddress.Text.Trim() == "" || txtEmail.Text.Trim() == "" || txtPassword.Text.Trim() == "")
+                if(txtName.Text.Trim() == "" || txtSurname.Text.Trim() == "" || txtPhoneNo.Text.Replace(" ","").Length < 12 || txtAddress.Text.Trim() == "" || txtEmail.Text.Trim() == "" || txtPassword.Text.Trim() == "")
                 {
-                    MessageBox.Show("Herhangi bir bilgi eksik bırakılmamalı.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill all the textboxes.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     if (txtPhoneNo.Text.Length < 14)
                     {
-                        MessageBox.Show("Numaranız eksik veya yanlış.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Your number is missing or incorrect.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtPhoneNo.Clear();
                     }
                     else
@@ -203,8 +234,8 @@ namespace Hub
                             string to = txtEmail.Text;                            
                             string subject2 = "Your Verify Code!";  
                             string body2 = "Verify Code: " + VerificationCode;
-                            string Email = "AkarE1521@outlook.com";
-                            string Password = "AkarE2021";
+                            string Email = "mailAdresiniz";
+                            string Password = "şifreniz";
                             string Host = "smtp.office365.com";
                             int Port = 587;
 
@@ -220,15 +251,11 @@ namespace Hub
                                     if (ismoved)
                                     {
                                         ismoved = false;
-                                        this.Size = new Size(this.Size.Width, this.Size.Height + 90);
-                                        panel1.Size = new Size(panel1.Size.Width, panel1.Size.Height + 90);
+                                        this.Size = new Size(401, 583);
+                                        buttonRegister.Enabled = false;
+                                        pictureBox3.Visible = true;
                                         txtVerify.Visible = true;
-                                        label2.Visible = true;
-                                        button1.Visible = true;
-                                        label2.Location = new Point(label2.Location.X, label2.Location.Y + 315);
-                                        txtVerify.Location = new Point(txtVerify.Location.X, txtVerify.Location.Y + 360);
-                                        button1.Location = new Point(19, 370);
-                                        pictureBox2.Location = new Point(pictureBox2.Location.X, button1.Location.Y - 10);
+                                        buttonVerify.Visible = true;
                                     }
                                     
                                 }
@@ -236,7 +263,7 @@ namespace Hub
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Hata: " + ex.Message, "Hata");
+                            MessageBox.Show("Error: " + ex.Message, "Error");
                         }
                         
                     }
@@ -246,6 +273,9 @@ namespace Hub
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
+            this.Size = new Size(401, 520);
+            ismoved = true;
+            buttonRegister.Enabled = true;
             if (!IsLet(txtName.Text))
             {
                 MessageBox.Show(txtName.Text + " is not valid key", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -255,6 +285,9 @@ namespace Hub
 
         private void txtSurname_TextChanged(object sender, EventArgs e)
         {
+            this.Size = new Size(401, 520);
+            buttonRegister.Enabled = true;
+            ismoved = true;
             if (!IsLet(txtSurname.Text))
             {
                 MessageBox.Show(txtSurname.Text + " is not valid key", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -288,16 +321,16 @@ namespace Hub
             login.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonVerify_Click(object sender, EventArgs e)
         {
             string usermail = txtEmail.Text;
             string base64String = string.Empty;
             base64String = Functions.ImageToBase64(pictureBox1.Image);
             string to = txtEmail.Text;
-            string subject = "Hoşgeldiniz!";
-            string body = "Bu mail kayıdınızın başarılı bir şekilde tamamlandığını belirtmektedir!";
-            string Email = "AkarE1521@outlook.com";
-            string Password = "AkarE2021";
+            string subject = "Welcome!";
+            string body = "This email confirms that your registration has been successfully completed!";
+            string Email = "mailAdresiniz";
+            string Password = "şifreniz";
             string Host = "smtp.office365.com";
             int Port = 587;
             if (txtVerify.Text == VerificationCode)
@@ -337,6 +370,132 @@ namespace Hub
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.Location = new Point(pictureBox2.Location.X - 2, pictureBox2.Location.Y + 2);
+        }
+    
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            this.Size = new Size(401, 520);
+            ismoved = true;
+            buttonRegister.Enabled = true;
+            int score = CalculatePasswordStrength(txtPassword.Text);
+
+            if(score == 0)
+            {
+                passwordStrength.BackColor = Color.White;
+                label2.Text = "";
+            }
+            if(score == 1)
+            {
+                passwordStrength.BackColor = Color.Red;
+                passwordStrength.Size = new Size(46, 20);
+                label2.Text = "Weak Password!";
+            }            
+            else if (score == 2)
+            {
+                passwordStrength.BackColor = Color.Orange;
+                passwordStrength.Size = new Size(92, 20);
+                label2.Text = "Normal Password!";
+            }
+            else if (score == 3)
+            {
+                passwordStrength.BackColor = Color.Gold;
+                passwordStrength.Size = new Size(138, 20);
+                label2.Text = "Strong Password!";
+            }
+            else if (score == 4)
+            {
+                passwordStrength.BackColor = Color.Green;
+                passwordStrength.Size = new Size(186,20);
+                label2.Text = "Very Strong Password!";
+            }
+            panel2.Visible = true;
+            passwordStrength.Visible = true;
+        }
+        private int CalculatePasswordStrength(string password)
+        {
+            int score = 0;
+            
+            if (System.Text.RegularExpressions.Regex.IsMatch(password, @"[a-z]"))
+                score++; // Küçük harf kontrolü
+
+            if (System.Text.RegularExpressions.Regex.IsMatch(password, @"[A-Z]"))
+                score++; // Büyük harf kontrolü
+
+            if (System.Text.RegularExpressions.Regex.IsMatch(password, @"[0-9]"))
+                score++; // Rakam kontrolü
+
+            if (System.Text.RegularExpressions.Regex.IsMatch(password, @"[!@#$%^&*(),.?""\\:{}|<>]"))
+                score++; // Özel karakter kontrolü
+
+            return score;
+        }
+
+        private void txtName_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+        }
+
+        private void txtSurname_Click(object sender, EventArgs e)
+        {
+            txtSurname.Clear();
+        }
+
+        private void txtPhoneNo_Click(object sender, EventArgs e)
+        {
+            txtPhoneNo.Clear();
+        }
+
+        private void txtAddress_Click(object sender, EventArgs e)
+        {
+            txtAddress.Clear();
+        }
+
+        private void txtEmail_Click(object sender, EventArgs e)
+        {
+            txtEmail.Clear();
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
+        }
+        
+        private void txtVerify_Click(object sender, EventArgs e)
+        {
+            txtVerify.Clear();
+        }
+
+        private void txtPhoneNo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            this.Size = new Size(401, 520);
+            buttonRegister.Enabled = true;
+        }
+
+        private void txtPhoneNo_TextChanged(object sender, EventArgs e)
+        {
+            this.Size = new Size(401, 520);
+            ismoved = true;
+            buttonRegister.Enabled = true;
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+            this.Size = new Size(401, 520);
+            ismoved = true;
+            buttonRegister.Enabled = true;
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            this.Size = new Size(401, 520);
+            ismoved = true;
+            buttonRegister.Enabled = true;
+        }
+
+        private void txtPhoneNo_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
+        {
+            ismoved = true;
+            buttonRegister.Enabled = true;
         }
     }
 }

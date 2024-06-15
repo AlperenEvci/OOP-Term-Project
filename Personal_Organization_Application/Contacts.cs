@@ -14,7 +14,6 @@ namespace Hub
         public string email { get; set; }
         public string address { get; set; }
         public string description { get; set; }
-        //adding id for the contacts
         public int id { get; set; }
         public int userID { get; set; }
     }
